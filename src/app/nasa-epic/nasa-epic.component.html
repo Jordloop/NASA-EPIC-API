@@ -2,7 +2,7 @@
 
 <form>
   <div class="form-group">
-    <label for="camera">Date</label>
+    <label>Date</label>
     <input type=date #roverDate>
   </div>
   <button (click)="getEpicImages(roverDate.value)">Get Photos</button>
@@ -11,5 +11,5 @@
   <app-photos-list [childPhotos]="photos"></app-photos-list>
 </div>
 <div *ngIf="noPhotos">
-    <h3>There were no photos taken on {{roverDate.value}} by the {{roverCamera.value}} camera.</h3>
+    <h3>There were no photos taken on {{roverDate.value}}.</h3>
 </div>
