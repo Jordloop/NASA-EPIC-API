@@ -5,7 +5,7 @@
     <label for="camera">Date</label>
     <input type=date #roverDate>
   </div>
-  <button (click)="getRoverImages(roverDate.value, roverCamera.value)">Get Photos</button>
+  <button (click)="getEpicImages(roverDate.value)">Get Photos</button>
 </form>
 <div *ngIf="photos && !noPhotos">
   <app-photos-list [childPhotos]="photos"></app-photos-list>

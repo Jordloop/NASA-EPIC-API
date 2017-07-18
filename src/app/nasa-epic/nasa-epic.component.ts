@@ -9,7 +9,7 @@ import { NasaEpicApiPhotosService } from '../nasa-epic-api-photos.service';
   styleUrls: ['./nasa-epic.component.css'],
   providers: [ NasaEpicApiPhotosService ]
 })
-export class RoverFormComponent {
+export class NasaEpicComponent {
   photos: any[]=null;
   noPhotos: boolean=false;
   constructor(private NasaEpicPhotos: NasaEpicApiPhotosService) { }
@@ -21,7 +21,7 @@ export class RoverFormComponent {
         this.photos = response.json();
       }
       else {
-        this.noPhoto = true;
+        this.noPhotos = true;
       }
       console.log(this.photos);
       });
